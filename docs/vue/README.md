@@ -1,6 +1,6 @@
-# Vue随手记录
+## Vue
 
-## 生命周期
+### 生命周期
 
 ```vue
 <!-- Parent -->
@@ -32,7 +32,7 @@
 </script>  
 ```
 
-## 计算属性 computed
+### 计算属性 computed
 
 计算属性默认只有 getter，不过在需要时你也可以提供一个 setter：
 
