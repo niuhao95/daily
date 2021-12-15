@@ -1,0 +1,19 @@
+{
+  "name": "daily",
+  "version": "1.0.0",
+  "description": "随手记录",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "niuhao95",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hao951029/daily/issues"
+  },
+  "homepage": "https://github.com/hao951029/daily",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
+}
