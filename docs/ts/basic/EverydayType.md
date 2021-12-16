@@ -13,15 +13,32 @@ let myName = "Alice"
 * `number`
 * `boolean`
 
-#### JavaScript 不常见的原始类型
+### in ts
 
-* `bigInt`
+* `void` -> 表示没有任何返回值的函数
+
+#### in js
+
+* `bigInt` (ES10) (2^53-1)
 * `symbol`
 
 ### 数组
 
 1. `string[]` === `Array<string>` (泛型 `T<U>`)
 2. `number[]`
+
+```ts
+// 类数组内置接口定义, 如: `IArguments`、`NodeList`、`HTMLCollection`
+function sum() {
+    let args: IArguments = arguments;
+}
+
+// 接口, 常用来表示类数组
+interface NumberArray {
+    [index: number]: number;
+}
+let fibonacci: NumberArray = [1, 1, 2, 3, 5];
+```
 
 ### any
 
@@ -32,6 +49,22 @@ let myName = "Alice"
 1. 参数类型注解 (也会检查传入参数的数量)
 2. 返回值类型注解
 3. 匿名函数会根据调用情况推断参数类型 (上下文推断)
+4. 可选参数后面不允许再出现必需参数
+5. ts会将添加了默认值的参数识别为可选参数(加默认值的可选参数不受顺序影响)
+6. `...rest: any[]` -> 获取剩余参数
+7. 重载，函数可以多次定义最后实现
+
+```ts
+function reverse(x: number): number;
+function reverse(x: string): string;
+function reverse(x: number | string): number | string | void {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    } else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
+}
+```
 
 ### 对象
 
@@ -67,9 +100,20 @@ function printId(id: number | string) {
 type ID = number | string;
 
 // 接口
-interface Animal {
-  name: string
+interface Person {
+  // 只读属性（约束第一次给对象赋值的时候，而不是第一次给只读属性赋值的时候）
+  readonly id: number;
+  name: string;
+  age?: number; // 可选属性（可以没有）
+  [propName: string]: any; // 任意属性
+  // [propName: number]: any; // 对确定和可选属性没有限制
 }
+// 一旦有任意属性(且属性名是string,number不限制)，确定属性和可选属性的类型都必须是它的类型的子集
+let tom: Person = {
+  id: 9527,
+  name: 'Tom',
+  gender: 'male'
+};
 ```
 
 #### 区别
@@ -179,3 +223,60 @@ handleRequest(req.url, req.method);
 #### strictNullChecks
 
 当 `strictNullChecks` 打开，如果一个值可能是 null 或者 undefined，你需要在用它的方法或者属性之前，先检查这些值
+
+### 枚举 (Enums)
+
+这并不是一个类型层面的增量，而是会添加到语言和运行时
+
+```ts
+enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat};
+
+console.log(Days["Sun"] === 0); // true
+console.log(Days["Mon"] === 1); // true
+console.log(Days["Tue"] === 2); // true
+console.log(Days["Sat"] === 6); // true
+
+console.log(Days[0] === "Sun"); // true
+console.log(Days[1] === "Mon"); // true
+console.log(Days[2] === "Tue"); // true
+console.log(Days[6] === "Sat"); // true
+```
+
+编译为:
+
+```js
+var Days;
+(function(Days) {
+    Days[Days["Sun"] = 0] = "Sun";
+    Days[Days["Mon"] = 1] = "Mon";
+    Days[Days["Tue"] = 2] = "Tue";
+    Days[Days["Wed"] = 3] = "Wed";
+    Days[Days["Thu"] = 4] = "Thu";
+    Days[Days["Fri"] = 5] = "Fri";
+    Days[Days["Sat"] = 6] = "Sat";
+})(Days || (Days = {}));
+```
+
+可以手动为枚举项赋值(小数或负数), 自动递增的枚举项可能和手动赋值的重复, 自动递增的步长为1
+
+```ts
+enum Days {Sun = 3, Mon = 1, Tue, Wed, Thu, Fri, Sat};
+
+console.log(Days["Sun"] === 3); // true
+console.log(Days["Wed"] === 3); // true
+console.log(Days[3] === "Sun"); // false
+console.log(Days[3] === "Wed"); // true
+
+// 重复部分的编译结果 js
+Days[Days["Sun"] = 3] = "Sun";
+Days[Days["Wed"] = 3] = "Wed";
+// 也可以赋值为非数字,配合类型断言
+enum Days {Sun = 7, Mon, Tue, Wed, Thu, Fri, Sat = <any>"S"};
+```
+
+### 元祖 (Tuple)
+
+ `type tupleType = [number, string, boolean]`
+
+* 已知索引访问或者直接初始化或赋值需要按照类型中指定的项
+* 越界元素类型被限制为元祖中每个类型的联合类型
