@@ -15,7 +15,8 @@ module.exports = {
           children: [
             ['/ts/basic/EverydayType', '常见类型'],
             ['/ts/basic/Narrowing', '类型收窄'],
-            ['/ts/basic/Declare', '声明文件']
+            ['/ts/basic/Declare', '声明文件'],
+            ['/ts/basic/Modules', '模块']
           ]
         }
       ]
