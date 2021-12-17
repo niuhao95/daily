@@ -13,7 +13,7 @@ let myName = "Alice"
 * `number`
 * `boolean`
 
-### in ts
+#### in ts
 
 * `void` -> 表示没有任何返回值的函数
 
