@@ -29,4 +29,27 @@
 * `CommonJS` 模块是运行时加载， `ES6 Module` 是编译时输出接口。
 * `CommonJS` require()是同步加载模块， `ES6 Module` import命令是异步加载，有一个独立的模块依赖的解析阶段。
 
-#### 循环加载 [todo](https://wangdoc.com/es6/module-loader.html#%E5%BE%AA%E7%8E%AF%E5%8A%A0%E8%BD%BD)
+#### CommonJs 模块加载原理
+
+`require` 引用一个 `cjs` 的模块时会执行整个脚本生成一个对象。
+
+```
+{
+  id: '...', // 模块名
+  exports: { ... }, // 模块输出的各个接口
+  loaded: true, // 脚本是否执行完毕
+  ...
+}
+```
+
+取值就是从上述对象的 `exports` 取值，多次 `require` 脚本只会执行一次也只会返回第一次运行的结果。
+
+#### CommonJS 模块的循环加载
+
+加载时执行，脚本代码在 `require` 的时候，就会全部执行。一旦出现某个模块被"循环加载"，就只输出已经执行的部分，还未执行的部分不会输出。
+
+#### ES6 模块的循环加载
+
+动态引用， `import` 从一个模块加载变量（如 `import foo from 'foo'` ），这些变量不会被缓存，而是成为一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。发生"循环加载"时会认为对应模块已经引入完成不会再执行对应脚本。造成的变量未定义的问题可以使用 `function` 或者 `var` 的变成提升特性解决。  
+
+更多[循环加载](https://wangdoc.com/es6/module-loader.html#%E5%BE%AA%E7%8E%AF%E5%8A%A0%E8%BD%BD)
