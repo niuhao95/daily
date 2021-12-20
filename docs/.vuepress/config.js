@@ -25,7 +25,8 @@ module.exports = {
           title: 'Vue3',
           sidebarDepth: 0,
           children: [
-            ['/vue/v3/summary', '未整理']
+            ['/vue/v3/VirtualDom', 'Virtual Dom'],
+            ['/vue/v3/Core', 'Core']
           ]
         },
         {
