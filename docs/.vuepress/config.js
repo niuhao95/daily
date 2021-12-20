@@ -19,6 +19,22 @@ module.exports = {
             ['/ts/basic/Modules', '模块']
           ]
         }
+      ],
+      '/vue/': [
+        {
+          title: 'Vue3',
+          sidebarDepth: 0,
+          children: [
+            ['/vue/v3/summary', '未整理']
+          ]
+        },
+        {
+          title: 'Vue2',
+          sidebarDepth: 0,
+          children: [
+            ['/vue/v2/summary', '未整理']
+          ]
+        }
       ]
     }
   },
