@@ -16,18 +16,21 @@ ES6 Reflect & Proxy
 // targetMap: 存储副作用
 // WeakMap 弱引用的Key可以更好的出发垃圾回收
 const targetMap = new WeakMap();
+let activeEffect = null;
 
 // track 追踪
 function track(target, key) {
-  let depsMap = targetMap.get(target);
-  if (!depsMap) {
-    targetMap.set(target, (depsMap = new Map()));
+  if (activeEffect) {
+    let depsMap = targetMap.get(target);
+    if (!depsMap) {
+      targetMap.set(target, (depsMap = new Map()));
+    }
+    let dep = depsMap.get(key);
+    if (!dep) {
+      depsMap.set(key, (dep = new Set()));
+    }
+    dep.add(activeEffect);
   }
-  let dep = depsMap.get(key);
-  if (!dep) {
-    depsMap.set(key, (dep = new Set()));
-  }
-  dep.add(effect);
 }
 
 // trigger 触发
@@ -62,18 +65,43 @@ function reactive(target) {
   return new Proxy(target, handler);
 }
 
+// watchEffect
+function effect(ef) {
+  activeEffect = ef;
+  activeEffect();
+  activeEffect = null;
+}
+
+// ref
+function ref(intialValue) {
+  const r = {
+    get value() {
+      track(r, 'value');
+      return intialValue;
+    },
+    set value(newValue) {
+      if (intialValue !== newValue) {
+        intialValue = newValue;
+        trigger(r, 'value');
+      }
+    },
+  };
+  return r;
+}
+
 let product = reactive({
   price: 5,
   quantity: 2,
 });
+let salePrice = ref(0);
 let total = 0;
 
-// effect 副作用
-let effect = () => {
-  total = product.price * product.quantity;
-  console.log(`total = ${total}`);
-};
-effect();
+effect(() => {
+  total = salePrice.value * product.quantity;
+});
+effect(() => {
+  salePrice.value = 0.9 * product.price;
+});
 ```
 
 ### Compiler Module
