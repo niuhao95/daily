@@ -2,7 +2,79 @@
 
 ### Reactivity Module
 
-[todo](https://www.bilibili.com/video/BV1SZ4y1x7a9?spm_id_from=333.999.0.0)
+关键字:
+[WeakMap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+[垃圾回收](https://zh.javascript.info/garbage-collection)
+[Reflect](https://wangdoc.com/es6/reflect.html)
+
+#### In Vue 2  
+ES5 Object.defineProperty()  
+#### In Vue 3  
+ES6 Reflect & Proxy  
+
+```js
+// targetMap: 存储副作用
+// WeakMap 弱引用的Key可以更好的出发垃圾回收
+const targetMap = new WeakMap();
+
+// track 追踪
+function track(target, key) {
+  let depsMap = targetMap.get(target);
+  if (!depsMap) {
+    targetMap.set(target, (depsMap = new Map()));
+  }
+  let dep = depsMap.get(key);
+  if (!dep) {
+    depsMap.set(key, (dep = new Set()));
+  }
+  dep.add(effect);
+}
+
+// trigger 触发
+function trigger(target, key) {
+  const depsMap = targetMap.get(target);
+  if (!depsMap) {
+    return;
+  }
+  let dep = depsMap.get(key);
+  if (dep) {
+    dep.forEach((effect) => effect());
+  }
+}
+
+// reactive: use Proxy & Reflect
+function reactive(target) {
+  const handler = {
+    get(target, key, receiver) {
+      let result = Reflect.get(target, key, receiver);
+      track(target, key);
+      return result;
+    },
+    set(target, key, value, receiver) {
+      let oldValue = target[key];
+      let result = Reflect.set(target, key, value, receiver);
+      if (oldValue !== value) {
+        trigger(target, key);
+      }
+      return result;
+    },
+  };
+  return new Proxy(target, handler);
+}
+
+let product = reactive({
+  price: 5,
+  quantity: 2,
+});
+let total = 0;
+
+// effect 副作用
+let effect = () => {
+  total = product.price * product.quantity;
+  console.log(`total = ${total}`);
+};
+effect();
+```
 
 ### Compiler Module
 
@@ -23,6 +95,10 @@ createVNode('div',{
 
 ### Renderer Module
 
+#### Render Phase
+
+ `render function => virtual Dom node`
+
 ```js
 function h(tag, props, children) {}
 function mount(vnode, container){}
@@ -33,10 +109,6 @@ const vdom = h('div', { class:'red' }, [
 
 mount(vdom, document.getElementById("app"))
 ```
-
-#### Render Phase
-
- `render function => virtual Dom node`
 
 #### Mount Phase
 
