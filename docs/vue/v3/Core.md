@@ -1,5 +1,3 @@
-## Core
-
 ### Reactivity Module
 
 关键字:

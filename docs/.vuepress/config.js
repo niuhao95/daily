@@ -1,10 +1,18 @@
 module.exports = {
   base: '/daily/',
   title: '随手记录',
+  theme: 'reco',
   themeConfig: {
+    modePicker: false,
+    subSidebar: 'auto',
     nav: [
-      { text: 'TypeScript4', link: '/ts/' },
-      { text: 'Vue', link: '/vue/' },
+      {
+        text: '读文档',
+        items: [
+          { text: 'TypeScript4', link: '/ts/' },
+          { text: 'Vue', link: '/vue/' }
+        ]
+      },
       { text: 'GitHub', link: 'https://github.com/hao951029' }
     ],
     sidebar: {

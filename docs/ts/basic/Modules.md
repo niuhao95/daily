@@ -22,7 +22,7 @@
   + webpack的resolve.extensions可以配置尝试解析哪些后缀名。（vue-cli脚手架不用写后缀的原因）
   + vite
 
-### ES6 Module vs CommonJS
+### ESM vs CJS
 
 * `CommonJS` 模块输出的是一个值的拷贝，`ES6 Module` 输出的是值的引用。
   + `ES6 Module` import命令在js引擎静态分析到的时候会生成一个“只读引用”，到脚本执行时去模块中取值。

@@ -93,7 +93,7 @@ function printId(id: number | string) {
 
 解决方案是用代码收窄联合类型 (类型收窄)
 
-### 类型别名（Type Aliases）& 接口
+### 类型别名 & 接口
 
 ```ts
 // 类型别名
