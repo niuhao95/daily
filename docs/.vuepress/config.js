@@ -1,10 +1,7 @@
 module.exports = {
   base: '/daily/',
   title: '随手记录',
-  theme: 'reco',
   themeConfig: {
-    modePicker: false,
-    subSidebar: 'auto',
     nav: [
       {
         text: '读文档',
