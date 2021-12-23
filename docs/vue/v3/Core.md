@@ -218,8 +218,8 @@ mount(vdom, document.getElementById("app"))
                 // not have key
                 const commonLength = Math.min(oldChildren.length, newChildren.length)
                 for(let i =0; i<commonLength; i++){
-                    patch(oldChildren(i), newChildren(i))
-                })
+                    patch(oldChildren[i], newChildren[i])
+                }
                 if(newChildren.length > oldChildren.length){
                     newChildren.slice(oldChildren.length).forEach(child => {
                         mount(child, el)

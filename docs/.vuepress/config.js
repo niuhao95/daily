@@ -10,6 +10,12 @@ module.exports = {
           { text: 'Vue', link: '/vue/' }
         ]
       },
+      {
+        text: '手写',
+        items: [
+          { text: 'Toast', link: '/handwriting/Toast.md' }
+        ]
+      },
       { text: 'GitHub', link: 'https://github.com/hao951029' }
     ],
     sidebar: {
@@ -31,7 +37,8 @@ module.exports = {
           sidebarDepth: 0,
           children: [
             ['/vue/v3/VirtualDom', 'Virtual Dom'],
-            ['/vue/v3/Core', 'Core']
+            ['/vue/v3/Core', 'Core'],
+            ['/vue/v3/Minivue', 'mini vue']
           ]
         },
         {
@@ -41,7 +48,10 @@ module.exports = {
             ['/vue/v2/summary', '未整理']
           ]
         }
-      ]
+      ],
+      '/handwriting/': [
+        ['Toast.md', 'Toast']
+      ],
     }
   },
   head: [
