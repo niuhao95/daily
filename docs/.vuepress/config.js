@@ -4,17 +4,18 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: '读文档',
+        text: '笔记',
         items: [
           { text: 'TypeScript4', link: '/ts/' },
-          { text: 'Vue', link: '/vue/' }
+          { text: 'Vue', link: '/vue/' },
+          { text: 'Another', link: '/another/Regex' }
         ]
       },
       {
         text: '手写',
         items: [
-          { text: 'Toast', link: '/handwriting/Toast.md' },
-          { text: '编程应用题', link: '/handwriting/AppQ.md' }
+          { text: 'Toast', link: '/handwriting/Toast' },
+          { text: '编程应用题', link: '/handwriting/AppQ' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/hao951029' }
@@ -51,9 +52,13 @@ module.exports = {
         }
       ],
       '/handwriting/': [
-        ['Toast.md', 'Toast'],
-        ['AppQ.md', '编程应用题']
+        ['Toast', 'Toast'],
+        ['AppQ', '编程应用题']
       ],
+      '/another/': [
+        ['Regex', '正则表达式'],
+        ['PRInGithub', 'github提交pr']
+      ]
     }
   },
   head: [
