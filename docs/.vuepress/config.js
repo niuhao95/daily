@@ -15,8 +15,8 @@ module.exports = {
       {
         text: '手写',
         items: [
-          { text: 'Toast', link: '/handwriting/Toast' },
-          { text: '编程应用题', link: '/handwriting/AppQ' }
+          { text: '组件实现', link: '/handwriting/Components/Toast' },
+          { text: '编程应用', link: '/handwriting/AppQ/1' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/hao951029' }
@@ -53,8 +53,26 @@ module.exports = {
         }
       ],
       '/handwriting/': [
-        ['Toast', 'Vue3 Toast'],
-        ['AppQ', '编程应用题']
+        {
+          title: '组件实现',
+          sidebarDepth: 0,
+          children: [
+            ['Components/Toast', 'Vue3 Toast']
+          ]
+        },
+        {
+          title: '编程应用',
+          sidebarDepth: 0,
+          children: [
+            ['AppQ/1', '下划线/驼峰 规则转换']
+          ]
+        },
+        {
+          title: '算法',
+          sidebarDepth: 0,
+          children: [
+          ]
+        }
       ],
       '/articles/': [
         {
