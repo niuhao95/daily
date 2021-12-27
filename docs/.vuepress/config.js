@@ -13,7 +13,8 @@ module.exports = {
       {
         text: '手写',
         items: [
-          { text: 'Toast', link: '/handwriting/Toast.md' }
+          { text: 'Toast', link: '/handwriting/Toast.md' },
+          { text: '编程应用题', link: '/handwriting/AppQ.md' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/hao951029' }
@@ -50,7 +51,8 @@ module.exports = {
         }
       ],
       '/handwriting/': [
-        ['Toast.md', 'Toast']
+        ['Toast.md', 'Toast'],
+        ['AppQ.md', '编程应用题']
       ],
     }
   },
