@@ -8,7 +8,8 @@ module.exports = {
         items: [
           { text: 'TypeScript4', link: '/ts/' },
           { text: 'Vue', link: '/vue/' },
-          { text: 'Another', link: '/another/Regex' }
+          { text: 'RegEx', link: '/another/Regex' },
+          { text: 'Blog', link: '/articles/1' }
         ]
       },
       {
@@ -52,12 +53,24 @@ module.exports = {
         }
       ],
       '/handwriting/': [
-        ['Toast', 'Toast'],
+        ['Toast', 'Vue3 Toast'],
         ['AppQ', '编程应用题']
       ],
-      '/another/': [
-        ['Regex', '正则表达式'],
-        ['PRInGithub', 'github提交pr']
+      '/articles/': [
+        {
+          title: 'Q&A',
+          sidebarDepth: 0,
+          children: [
+            ['1', '函数表达式vs声明']
+          ]
+        },
+        {
+          title: '记录',
+          sidebarDepth: 0,
+          children: [
+            ['PRInGithub', 'github提交pr']
+          ]
+        }
       ]
     }
   },
