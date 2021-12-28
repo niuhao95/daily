@@ -332,3 +332,106 @@ console.log(object2);
   :::
 
 ### es11
+
+| 特性| 说明|
+| -| -|
+| Optional Chaining `?.`| 可选链操作符|
+| Nullish coalescing Operator `??`| 空值合并操作符|
+| `String.prototype.matchAll`||
+| `import()`||
+| `Promise.allSettled`||
+| Bigint||
+| globalThis||
+
+#### import()
+
+`import()`和`import`的区别
+- import() 可以用在script脚本区，不止是模块内。
+- 如果在模块内使用import()，它可以在任何地方任何级别执行，而不是被提升到顶级（优先执行）。
+- import() 是运行时执行，也即什么时候运行到这句，就会加载参数指定的模块；参数也可以是动态可变的，不止是静态参数。
+- import() 不建立可静态分析的依赖关系（静态分析的情况下可以做很多优化），但是，在一些比较简单的情况下，比如import（“/foo.js”）中，实现仍然可以执行静态分析优化。
+
+::: details e.g.
+```js
+import('./module.js')
+.then(module => {
+  console.log(module.default);//直接通过default属性获得模块暴露的接口
+});
+```
+:::
+
+#### Promise.allSettled
+
+::: details e.g.
+```js
+Promise.allSettled([Promise.resolve("coffe"), Promise.reject("1891")]).then(
+  arr => {
+    console.log(arr); //>> [ { status: "fulfilled", value: "coffe"},
+                      //>>   { status: "rejected", reason: "1891" } ]
+  }
+);
+```
+:::
+
+#### Bigint
+ 
+Number 类型超出这个范围的整数计算或者表示会丢失精度
+- `Number.MIN_SAFE_INTEGER`: `-(2^53-1)`
+- `Number.MAX_SAFE_INTEGER`: `(2^53-1)`
+
+*它是JavaScript的第7个原始类型，不能将 BigInt与Number混合使用。比较Number和 BigInt是可以的，但是不能把它们相加。*
+
+::: details e.g.
+```js
+var num = Number.MAX_SAFE_INTEGER;  // >> 9007199254740991
+num = num + 1; // >> 9007199254740992
+// 再次加 +1 后无法正常运算
+num = num + 1; // >> 9007199254740992
+// 两个不同的值，却返回了true
+9007199254740992 === 9007199254740993  // >> true
+
+// bigInt
+const aNumber = 1891;
+const aBigInt = BigInt(aNumber);
+aBigInt === 1891n // true
+typeof aBigInt === 'bigint' // true
+typeof 1891 // "number"
+typeof 1891n // "bigint"
+
+1234567890123456789n * 123n; // -> 151851850485185185047n
+
+1n < 2 // true
+1n + 2 // Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+:::
+
+#### globalThis
+
+兼容 `浏览器`/`Node.js`/`Web Workers`
+
+::: details e.g.
+```js
+// ES10之前的解决方案
+const getGlobal = function(){
+  if(typeof self !== 'undefined') return self
+  if(typeof window !== 'undefined') return window
+  if(typeof global !== 'undefined') return global
+  throw new Error('unable to locate global object')
+}
+
+// ES10内置
+globalThis.Array(0,1,2) // [0,1,2]
+
+// 定义一个全局对象v = { value:true } ,ES10用如下方式定义
+globalThis.v = { value:true }
+
+// worker
+globalThis === self
+// node
+globalThis === global
+// browser
+globalThis === window
+```
+:::
+
+### es12
