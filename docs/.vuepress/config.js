@@ -16,7 +16,8 @@ module.exports = {
         text: '手写',
         items: [
           { text: '组件实现', link: '/handwriting/Components/Toast' },
-          { text: '编程应用', link: '/handwriting/AppQ/1' }
+          { text: '编程应用', link: '/handwriting/AppQ/1' },
+          { text: '算法', link: '/handwriting/leetcode/4' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/hao951029' }
@@ -64,13 +65,15 @@ module.exports = {
           title: '编程应用',
           sidebarDepth: 0,
           children: [
-            ['AppQ/1', '下划线/驼峰 规则转换']
+            ['AppQ/1', '下划线/驼峰 规则转换'],
+            ['AppQ/2', '迭代器实现 flat'],
           ]
         },
         {
           title: '算法',
           sidebarDepth: 0,
           children: [
+            ['leetcode/4', '4.寻找两个正序数组的中位数']
           ]
         }
       ],
@@ -79,7 +82,9 @@ module.exports = {
           title: 'Q&A',
           sidebarDepth: 0,
           children: [
-            ['1', '函数表达式vs声明']
+            ['1', '函数表达式 vs 函数声明'],
+            ['es6+', 'es6+特性'],
+            ['iterator', '什么是迭代器']
           ]
         },
         {
