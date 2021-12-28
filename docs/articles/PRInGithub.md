@@ -1,4 +1,4 @@
-### pull request
+### github 提交 pr (pull request)
 
 ```bash
 # fork
