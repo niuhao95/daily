@@ -1,6 +1,8 @@
+## ECMAScript
+
 ### ES6
 
-todo
+[ECMAScript 6 教程](https://wangdoc.com/es6/)
 
 ### ES7
 
@@ -435,3 +437,21 @@ globalThis === window
 :::
 
 ### ES12
+
+| 特性| 说明|
+| -| -|
+| `String.prototype.replaceAll`||
+| `Promise.any`||
+| WeakRefs||
+| Numeric separators `_`| 数字分隔符|
+| Logical assignment operator| 逻辑赋值运算符|
+| Private getters and setters||
+| Private class methods||
+| `/d`| RegEx Flag|
+| Top-level `await`| [tc39/proposal-top-level-await](https://github.com/tc39/proposal-top-level-await/)|
+
+#### Logical assignment operator
+
+1. `(??=) -> (x ??= y)`
+2. `(&&=) -> (x &&=y)`
+3. `(||?) -> (x ||=y ))`

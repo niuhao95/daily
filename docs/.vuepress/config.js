@@ -83,8 +83,9 @@ module.exports = {
           sidebarDepth: 0,
           children: [
             ['1', '函数表达式 vs 函数声明'],
-            ['ES6+', 'es6+特性'],
-            ['iterator', '什么是迭代器']
+            ['es6+', 'ES6+特性'],
+            ['iterator', '什么是迭代器'],
+            ['Promise', 'Promise']
           ]
         },
         {
