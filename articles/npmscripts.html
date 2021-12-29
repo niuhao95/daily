@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>package.json | 随手记录</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/95835868">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/daily/assets/css/0.styles.f827222d.css" as="style"><link rel="preload" href="/daily/assets/js/app.af63bd61.js" as="script"><link rel="preload" href="/daily/assets/js/2.206930df.js" as="script"><link rel="preload" href="/daily/assets/js/7.da2f123e.js" as="script"><link rel="prefetch" href="/daily/assets/js/10.787041d1.js"><link rel="prefetch" href="/daily/assets/js/11.37764918.js"><link rel="prefetch" href="/daily/assets/js/12.d301e427.js"><link rel="prefetch" href="/daily/assets/js/13.f937f869.js"><link rel="prefetch" href="/daily/assets/js/14.9ea68132.js"><link rel="prefetch" href="/daily/assets/js/15.9b108b41.js"><link rel="prefetch" href="/daily/assets/js/16.95f5356c.js"><link rel="prefetch" href="/daily/assets/js/17.b54bc15c.js"><link rel="prefetch" href="/daily/assets/js/18.d659ba33.js"><link rel="prefetch" href="/daily/assets/js/19.a4bad248.js"><link rel="prefetch" href="/daily/assets/js/20.ecfced0d.js"><link rel="prefetch" href="/daily/assets/js/21.b23c75af.js"><link rel="prefetch" href="/daily/assets/js/22.f464c305.js"><link rel="prefetch" href="/daily/assets/js/23.5a930268.js"><link rel="prefetch" href="/daily/assets/js/24.a9adc297.js"><link rel="prefetch" href="/daily/assets/js/25.28f4372f.js"><link rel="prefetch" href="/daily/assets/js/26.f179e2ab.js"><link rel="prefetch" href="/daily/assets/js/27.791ba325.js"><link rel="prefetch" href="/daily/assets/js/28.5122a429.js"><link rel="prefetch" href="/daily/assets/js/29.cc651587.js"><link rel="prefetch" href="/daily/assets/js/3.38384cf1.js"><link rel="prefetch" href="/daily/assets/js/4.72f28218.js"><link rel="prefetch" href="/daily/assets/js/5.f3b9ce5c.js"><link rel="prefetch" href="/daily/assets/js/6.66e3eb55.js"><link rel="prefetch" href="/daily/assets/js/8.641ebcb9.js"><link rel="prefetch" href="/daily/assets/js/9.61dc8fe6.js">
+    <link rel="stylesheet" href="/daily/assets/css/0.styles.f827222d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/daily/" class="home-link router-link-active"><!----> <span class="site-name">随手记录</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily/ts/" class="nav-link">
+  TypeScript4
+</a></li><li class="dropdown-item"><!----> <a href="/daily/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/daily/another/Regex.html" class="nav-link">
+  RegEx
+</a></li><li class="dropdown-item"><!----> <a href="/daily/articles/1.html" class="nav-link">
+  Blog
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="手写" class="dropdown-title"><span class="title">手写</span> <span class="arrow down"></span></button> <button type="button" aria-label="手写" class="mobile-dropdown-title"><span class="title">手写</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily/handwriting/Components/Toast.html" class="nav-link">
+  组件实现
+</a></li><li class="dropdown-item"><!----> <a href="/daily/handwriting/AppQ/1.html" class="nav-link">
+  编程应用
+</a></li><li class="dropdown-item"><!----> <a href="/daily/handwriting/leetcode/4.html" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/hao951029" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily/ts/" class="nav-link">
+  TypeScript4
+</a></li><li class="dropdown-item"><!----> <a href="/daily/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/daily/another/Regex.html" class="nav-link">
+  RegEx
+</a></li><li class="dropdown-item"><!----> <a href="/daily/articles/1.html" class="nav-link">
+  Blog
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="手写" class="dropdown-title"><span class="title">手写</span> <span class="arrow down"></span></button> <button type="button" aria-label="手写" class="mobile-dropdown-title"><span class="title">手写</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/daily/handwriting/Components/Toast.html" class="nav-link">
+  组件实现
+</a></li><li class="dropdown-item"><!----> <a href="/daily/handwriting/AppQ/1.html" class="nav-link">
+  编程应用
+</a></li><li class="dropdown-item"><!----> <a href="/daily/handwriting/leetcode/4.html" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/hao951029" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Q&amp;A</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/daily/articles/1.html" class="sidebar-link">函数表达式/函数声明</a></li><li><a href="/daily/articles/es6+.html" class="sidebar-link">ES6+</a></li><li><a href="/daily/articles/iterator.html" class="sidebar-link">可迭代/迭代器协议</a></li><li><a href="/daily/articles/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/daily/articles/npmscripts.html" aria-current="page" class="active sidebar-link">NPM</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>记录</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="package-json"><a href="#package-json" class="header-anchor">#</a> <code>package.json</code></h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 配置默认项</span>
+<span class="token function">npm</span> <span class="token builtin class-name">set</span> init.author.email <span class="token string">&quot;niuhao95@gmail.com&quot;</span>
+<span class="token function">npm</span> <span class="token builtin class-name">set</span> init.author.name <span class="token string">&quot;niuhao95&quot;</span>
+<span class="token function">npm</span> <span class="token builtin class-name">set</span> init.author.url <span class="token string">&quot;https://github.com/hao951029&quot;</span>
+<span class="token function">npm</span> <span class="token builtin class-name">set</span> init.license <span class="token string">&quot;MIT&quot;</span>
+<span class="token comment"># 默认生成方式1</span>
+<span class="token function">npm</span> init -y
+
+<span class="token comment"># 默认生成方式2</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> init-module ~<span class="token punctuation">\</span>.npm-init.js
+<span class="token comment"># .npm-init.js</span>
+const desc <span class="token operator">=</span> prompt<span class="token punctuation">(</span><span class="token string">'请输入项目描述'</span>, <span class="token string">'项目描述...'</span><span class="token punctuation">)</span>
+module.exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    key: <span class="token string">'value'</span>,
+    name: prompt<span class="token punctuation">(</span><span class="token string">'name?'</span>, process.cwd<span class="token punctuation">(</span><span class="token punctuation">)</span>.split<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>.pop<span class="token punctuation">(</span><span class="token punctuation">))</span>,
+    version: prompt<span class="token punctuation">(</span><span class="token string">'version?'</span>, <span class="token string">'0.0.1'</span><span class="token punctuation">)</span>,
+    description: desc,
+    main: <span class="token string">'index.js'</span>,
+    repository: prompt<span class="token punctuation">(</span><span class="token string">'github repository url'</span>, <span class="token string">''</span>, function<span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            run<span class="token punctuation">(</span><span class="token string">'touch README.md'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            run<span class="token punctuation">(</span><span class="token string">'git init'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            run<span class="token punctuation">(</span><span class="token string">'git add README.md'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            run<span class="token punctuation">(</span><span class="token string">'git commit -m &quot;first commit&quot;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            run<span class="token punctuation">(</span><span class="token variable"><span class="token variable">`</span><span class="token function">git</span> remote <span class="token function">add</span> origin $<span class="token punctuation">{</span>url<span class="token punctuation">}</span><span class="token variable">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            run<span class="token punctuation">(</span><span class="token string">'git push -u origin master'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token builtin class-name">return</span> url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="name"><a href="#name" class="header-anchor">#</a> <code>name</code></h3> <p><code>scope</code> e.g. <code>@myorg/mypackage</code></p> <h3 id="version"><a href="#version" class="header-anchor">#</a> <code>version</code></h3> <p><a href="https://docs.npmjs.com/about-semantic-versioning" target="_blank" rel="noopener noreferrer"><code>semver - semantic versioning</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://semver.npmjs.com/" target="_blank" rel="noopener noreferrer"><code>npm semver calculator</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="main"><a href="#main" class="header-anchor">#</a> <code>main</code></h3> <h3 id="files"><a href="#files" class="header-anchor">#</a> <code>files</code></h3> <h3 id="scripts"><a href="#scripts" class="header-anchor">#</a> <code>scripts</code></h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token comment">// npm run &lt;stage&gt;</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Pre &amp; Post scripts</span>
+    <span class="token property">&quot;precompress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{{ executes BEFORE the `compress` script }}&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;compress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{{ run command to compress files }}&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;postcompress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{{ executes AFTER `compress` script }}&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// Life Cycle Scripts</span>
+    <span class="token property">&quot;prepare&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;prepublish&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 已弃用</span>
+    <span class="token property">&quot;prepublishOnly&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;prepack&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;postpack&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="vs-package-lock-json"><a href="#vs-package-lock-json" class="header-anchor">#</a> vs <code>package-lock.json</code></h3> <h4 id="lockfileversion"><a href="#lockfileversion" class="header-anchor">#</a> <code>lockfileVersion</code></h4> <p>todo</p> <h4 id="hasinstallscript"><a href="#hasinstallscript" class="header-anchor">#</a> <code>hasInstallScript</code></h4> <p>todo</p> <h2 id="npm"><a href="#npm" class="header-anchor">#</a> <code>npm</code></h2> <h3 id="npm-install"><a href="#npm-install" class="header-anchor">#</a> <code>npm install</code></h3> <p>如果你的包根目录有<a href="http://nodejs.cn/api/addons/building.html" target="_blank" rel="noopener noreferrer"><code>binding.gyp</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>文件，并且没有定义自己的<code>install</code>或<code>preinstall</code>脚本，<code>npm</code>将通过<code>node-gyp rebuild</code>使用<code>node-gyp</code>进行编译默认的<code>install</code>命令。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&lt;</span>pkg-name<span class="token operator">&gt;</span>
+
+<span class="token comment"># preinstall</span>
+<span class="token comment"># install</span>
+<span class="token comment"># postinstall</span>
+<span class="token comment"># prepublish 已废弃</span>
+<span class="token comment"># preprepare</span>
+<span class="token comment"># prepare</span>
+<span class="token comment"># postprepare</span>
+</code></pre></div><p><img src="/daily/assets/img/npm_install.17be192b.png" alt="执行过程"></p> <h4 id="检查config文件-npmrc"><a href="#检查config文件-npmrc" class="header-anchor">#</a> 检查config文件<code>.npmrc</code></h4> <p>项目下的 -&gt; 用户级的 -&gt; 全局的 -&gt; 内置默认的</p> <h4 id="构建依赖树"><a href="#构建依赖树" class="header-anchor">#</a> 构建依赖树</h4> <p>下载依赖按照扁平化原则优先下载到<code>node_modules</code>根目录，遇到相同模块就判断已存在的模块是否符合新模块的版本范围，符合跳过，不符合就添加到当前模块的<code>node_modules</code>目录</p> <h4 id="缓存机制"><a href="#缓存机制" class="header-anchor">#</a> 缓存机制</h4> <ul><li><code>npm config get cache</code> e.g.<code>:/Users/&lt;user&gt;/.npm</code>（Mac OS中npm默认的缓存位置）</li> <li>通过<code>pacote</code>把相应的包解压到<code>node_modules</code>，<code>pacote</code>通过<code>npm-registry-fetch</code>下载包，<code>npm-registry-fetch</code>通过设置<code>cache</code>属性在给定的路径下根据<code>IETF RFC 7234</code>生成缓存数据</li> <li><code>npm v5</code>之前，缓存直接存储在<code>~/.npm/cache/&lt;name&gt;/&lt;version&gt;</code></li> <li><code>npm v5</code>之后，缓存放在<code>.npm/_cacache</code>文件夹中，命令 <code>npm cache clean --force</code> 可以清除其中的文件
+<ul><li><code>content-v2</code> 包含一些二进制文件，将后缀修改为<code>.tgz</code>解压后就是对于的Npm包资源</li> <li><code>index-v5</code> 存储<code>content-v2</code>资源的索引，<code>package-lock.json</code>中的<code>integrity/version/name</code>可以生成唯一的对应这个索引的<code>Key</code>-&gt;<code>hash</code>-&gt;<code>tar包</code>-&gt;<code>pacote解压</code></li> <li><code>tmp</code></li> <li><code>node-sass</code></li></ul></li></ul> <h4 id="npm-install-force-npm-install-legacy-peer-deps"><a href="#npm-install-force-npm-install-legacy-peer-deps" class="header-anchor">#</a> <code>npm install --force</code> &amp; <code>npm install --legacy-peer-deps</code></h4> <p><a href="https://stackoverflow.com/questions/66020820/npm-when-to-use-force-and-legacy-peer-deps" target="_blank" rel="noopener noreferrer">依赖冲突问题解决方案<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://docs.npmjs.com/creating-and-viewing-access-tokens" target="_blank" rel="noopener noreferrer">npm new token<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://stackoverflow.com/questions/66239691/what-does-npm-install-legacy-peer-deps-do-exactly-when-is-it-recommended-wh" target="_blank" rel="noopener noreferrer">node-sass问题1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://stackoverflow.com/questions/45251645/error-enoent-no-such-file-or-directory-scandir" target="_blank" rel="noopener noreferrer">node-sass问题2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-bash extra-class"><pre class="language-bash"><code>node node_modules/node-sass/scripts/install.js
+<span class="token function">npm</span> rebuild node-sass
+</code></pre></div><h3 id="npm-ci"><a href="#npm-ci" class="header-anchor">#</a> <code>npm ci</code></h3> <p><a href="https://www.npmjs.cn/cli/ci/" target="_blank" rel="noopener noreferrer"><code>npm ci</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>类似于 <code>npm install</code> ，不同之处在于它旨在用于自动化环境，例如测试平台、持续集成和部署 —— 或者您希望确保对依赖项进行全新安装的任何情况。通过跳过某些面向用户的功能，它可以比常规的 npm 安装快得多。它也比常规安装更严格，可以帮助捕获由大多数 npm 用户增量安装的本地环境引起的错误或不一致。</p> <h3 id="npm-publish"><a href="#npm-publish" class="header-anchor">#</a> <code>npm publish</code></h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 登录</span>
+<span class="token function">npm</span> login
+<span class="token function">npm</span> <span class="token function">whoami</span>
+<span class="token comment"># 发布</span>
+<span class="token function">npm</span> publish
+<span class="token comment"># 更新</span>
+<span class="token function">npm</span> version patch/minor/major
+<span class="token function">npm</span> publish
+
+<span class="token comment"># prepublishOnly</span>
+<span class="token comment"># prepack</span>
+<span class="token comment"># prepare</span>
+<span class="token comment"># postpack</span>
+<span class="token comment"># publish</span>
+<span class="token comment"># postpublish</span>
+</code></pre></div><h3 id="nrm"><a href="#nrm" class="header-anchor">#</a> <code>nrm</code></h3> <p>用来管理多个 <code>npm</code> 源，方便切换</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 全局安装</span>
+<span class="token function">npm</span> i -g nrm
+
+<span class="token comment"># 添加自定义源</span>
+nrm <span class="token function">add</span> jd http://registry.m.jd.com
+<span class="token comment"># 切换当前使用的Npm源</span>
+nrm use jd
+<span class="token comment"># 其他命令</span>
+nrm <span class="token function">ls</span>
+nrm current
+nrm del jd
+<span class="token comment"># 测试延迟时间</span>
+nrm <span class="token builtin class-name">test</span> jd
+</code></pre></div><h2 id="pnpm"><a href="#pnpm" class="header-anchor">#</a> <code>pnpm</code></h2> <p>软链</p> <h2 id="yarn"><a href="#yarn" class="header-anchor">#</a> <code>yarn</code></h2> <h2 id="npm-pnpm-yarn-node-modules"><a href="#npm-pnpm-yarn-node-modules" class="header-anchor">#</a> <code>npm</code>/<code>pnpm</code>/<code>yarn</code> <code>node_modules</code></h2> <h2 id="npx"><a href="#npx" class="header-anchor">#</a> <code>npx</code></h2> <p>在<code>npm v5.2</code>引入，在执行模块时会优先安装依赖，运行完成后会删除。</p> <h2 id="cross-env"><a href="#cross-env" class="header-anchor">#</a> <code>cross-env</code></h2> <p>安装：<code>npm install --save-dev cross-env</code></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cross-env NODE_ENV=development ...&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cross-env NODE_ENV=production ...&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/daily/articles/Promise.html" class="prev">
+        Promise
+      </a></span> <span class="next"><a href="/daily/articles/PRInGithub.html">
+        github提交pr
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/daily/assets/js/app.af63bd61.js" defer></script><script src="/daily/assets/js/2.206930df.js" defer></script><script src="/daily/assets/js/7.da2f123e.js" defer></script>
+  </body>
+</html>
