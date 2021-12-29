@@ -1,4 +1,4 @@
-## Promise 介绍
+## Promise
 
 ### Promise.all - ES6
 
