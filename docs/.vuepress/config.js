@@ -82,10 +82,11 @@ module.exports = {
           title: 'Q&A',
           sidebarDepth: 0,
           children: [
-            ['1', '函数表达式 vs 函数声明'],
-            ['es6+', 'ES6+特性'],
-            ['iterator', '什么是迭代器'],
-            ['Promise', 'Promise']
+            ['1', '函数表达式/函数声明'],
+            ['es6+', 'ES6+'],
+            ['iterator', '可迭代/迭代器协议'],
+            ['Promise', 'Promise'],
+            ['npmscripts', 'NPM']
           ]
         },
         {
