@@ -82,11 +82,13 @@ module.exports = {
           title: 'Q&A',
           sidebarDepth: 0,
           children: [
-            ['1', '函数表达式/函数声明'],
+            ['func', '函数表达式/函数声明'],
             ['es6+', 'ES6+'],
             ['iterator', '可迭代/迭代器协议'],
             ['Promise', 'Promise'],
-            ['npmscripts', 'NPM']
+            ['npmscripts', 'package.json'],
+            ['http', 'TCP/UDP/HTTP'],
+            ['broswercache', '浏览器缓存策略']
           ]
         },
         {
