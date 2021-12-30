@@ -9,7 +9,7 @@ module.exports = {
           { text: 'TypeScript4', link: '/ts/' },
           { text: 'Vue', link: '/vue/' },
           { text: 'RegEx', link: '/another/Regex' },
-          { text: 'Blog', link: '/articles/1' }
+          { text: 'Blog', link: '/articles/func' }
         ]
       },
       {
