@@ -15,6 +15,8 @@
 `http1.0` 响应头，表示防止客户端缓存资源，强制从服务端获取，与 `Cache-Control: no-cache` 效果一直。
 
 ##### cache-control: max-age=31536000  
+![cache1](../../assets/img/cache1.png)  
+![cache](../../assets/img/cache.png)  
 
 `http1.1` 响应头， 客户端和服务器的指令有区别。
 
