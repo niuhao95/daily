@@ -10,9 +10,9 @@
   "author": "niuhao95",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hao951029/daily/issues"
+    "url": "https://github.com/niuhao95/daily/issues"
   },
-  "homepage": "https://hao951029.github.io/daily",
+  "homepage": "https://niuhao95.github.io/daily",
   "devDependencies": {
     "vuepress": "^1.8.2"
   }

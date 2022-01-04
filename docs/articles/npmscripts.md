@@ -3,7 +3,7 @@
 # 配置默认项
 npm set init.author.email "niuhao95@gmail.com"
 npm set init.author.name "niuhao95"
-npm set init.author.url "https://github.com/hao951029"
+npm set init.author.url "https://github.com/niuhao95"
 npm set init.license "MIT"
 # 默认生成方式1
 npm init -y

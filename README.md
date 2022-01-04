@@ -1,3 +1,3 @@
 # daily
 
-[daily blog](https://hao951029.github.io/daily/)
+[daily blog](https://niuhao95.github.io/daily/)

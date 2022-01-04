@@ -20,7 +20,7 @@ module.exports = {
           { text: '算法', link: '/handwriting/leetcode/4' }
         ]
       },
-      { text: 'GitHub', link: 'https://github.com/hao951029' }
+      { text: 'GitHub', link: 'https://github.com/niuhao95' }
     ],
     sidebar: {
       '/ts/': [
