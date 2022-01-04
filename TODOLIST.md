@@ -1,8 +1,9 @@
 ### 15天学习计划
 
 - 12-30
-    1. tcp/udp/http(1.1/2/3)/https
-    2. 浏览器缓存策略
+    1. tcp/udp ✅
+    2. http(1.1/2/3)/https
+    3. 浏览器缓存策略
 - 12-31
     1. flex/grid
     2. loading delay 优化闪烁问题
