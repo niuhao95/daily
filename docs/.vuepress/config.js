@@ -87,7 +87,7 @@ module.exports = {
             ['iterator', '可迭代/迭代器协议'],
             ['Promise', 'Promise'],
             ['npmscripts', 'package.json'],
-            ['http', 'TCP/UDP/HTTP'],
+            ['http', 'HTTP'],
             ['broswercache', '浏览器缓存策略']
           ]
         },

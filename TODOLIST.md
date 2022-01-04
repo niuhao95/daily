@@ -2,7 +2,7 @@
 
 - 12-30
     1. tcp/udp ✅
-    2. http(1.1/2/3)/https
+    2. http(1.1/2/3)/https ✅
     3. 浏览器缓存策略
 - 12-31
     1. flex/grid
