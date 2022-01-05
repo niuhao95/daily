@@ -88,7 +88,8 @@ module.exports = {
             ['Promise', 'Promise'],
             ['npmscripts', 'package.json'],
             ['http', 'HTTP'],
-            ['broswercache', '浏览器缓存策略']
+            ['broswercache', '浏览器缓存策略'],
+            ['flex', 'flex/grid'],
           ]
         },
         {

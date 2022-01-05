@@ -5,8 +5,9 @@
     2. http(1.1/2/3)/https ✅
     3. 浏览器缓存策略 ✅
 - 12-31
-    1. flex/grid
-    2. loading delay 优化闪烁问题
+    1. flex ✅
+    2. grid ✅
+    3. loading delay 优化闪烁问题
 - *1-1*
     1. 本地存储
         - service worker 离线存储
