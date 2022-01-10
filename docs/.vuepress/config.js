@@ -90,13 +90,15 @@ module.exports = {
             ['http', 'HTTP'],
             ['broswercache', '浏览器缓存策略'],
             ['flex', 'flex/grid'],
+            ['loading', '更好的loading']
           ]
         },
         {
           title: '记录',
           sidebarDepth: 0,
           children: [
-            ['PRInGithub', 'github提交pr']
+            ['PRInGithub', 'github提交pr'],
+            ['other', '碎片化'],
           ]
         }
       ]

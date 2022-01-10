@@ -33,8 +33,13 @@
     1. Event Loop
 - 1-6
     1. webpack vite hrm原理
+    2. webpack/vite/rollup runtime
+    3. webpack如何打包的css
+        - 插入到dom
+        - 使用html-webpack-plugin 插入到html
 - 1-7
     1. webpack loader(md为例) & plugin 编写
+    2. 手写mini webpack
 - *1-8*
     1. 手写 Promise
     2. vue-virtual-scroller 虚拟列表
@@ -46,10 +51,13 @@
     1. 插槽的 template / render func 实践
 - 1-11
     1. vue router原理 hash / history
+    2. 懒加载的方案/Lazy loading/IntersectionObserver
 - 1-12
     1. Vue.use
+    2. git hooks(husky)
 - 1-13
     1. watermark-dom 水印如何防止删除
+    2. 暂时性死区
 - 1-14
     1. 设计模式
 
@@ -60,15 +68,21 @@
     - `p-limit`/`p-map`/`p-retry`
 3. 什么是 Vue 的 runtime
 4. 手写Redux
+5. p7面试
+
 
 ### 进阶
 
-- JSON schema
+- JSON schema/ joi
 - 脚手架 网盘课程学习+笔记
+    - lerna
+    - npm link
+    - process.argv
 - ts
 - nodejs
     1. pm2
     2. forever
+    3. 连接数据库的工具
 - nuxt
 - react
     1. 高阶组件 / 受控组件
