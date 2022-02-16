@@ -1,0 +1,1 @@
+![css specitify](../../assets/img/specifishity.png)  
