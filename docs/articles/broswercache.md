@@ -1,5 +1,7 @@
 ## 浏览器缓存策略
 
+CHP(Cache Hit Percentage): `cache hit / (cache hit + cache miss)`
+
 ### 缓存过程
 
 #### 强缓存
@@ -15,14 +17,11 @@
 `http1.0` 响应头，表示防止客户端缓存资源，强制从服务端获取，与 `Cache-Control: no-cache` 效果一直。
 
 ##### cache-control: max-age=31536000  
+`http1.1` 响应头， 客户端和服务器的指令有区别。[mdn](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
+
 ![cache1](../../assets/img/cache1.png)  
 ![cache](../../assets/img/cache.png)  
 
-`http1.1` 响应头， 客户端和服务器的指令有区别。
-
-* `max-age=<seconds>` 值为相对于请求的时间
-* `no-cache` (同max-age=0)可以缓存，但必须重新验证有效性，可以跳过http响应体的下载
-* `no-store` 不缓存
 * `only-if-cached` 只接受缓存，并不向服务端验证
 
 #### 协商缓存
