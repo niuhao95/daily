@@ -7,7 +7,7 @@
 - 12-31
     1. flex ✅
     2. grid ✅
-    3. loading delay 优化闪烁问题
+    3. loading delay ✅
 - *1-1*
     1. 本地存储
         - service worker 离线存储
@@ -50,11 +50,16 @@
 - 1-10
     1. 插槽的 template / render func 实践
 - 1-11
-    1. vue router原理 hash / history
+    1. vue router原理 hash / history / 动态路由 path/:id (前缀树)
     2. 懒加载的方案/Lazy loading/IntersectionObserver
 - 1-12
     1. Vue.use
-    2. git hooks(husky)
+    2. git hooks(husky) ✅
+        ```
+        git commit -n(git commit --no-verify)
+        .git/hooks/pre-commit.sample 等等
+        core.hooksPath
+        ```
 - 1-13
     1. watermark-dom 水印如何防止删除
     2. 暂时性死区
@@ -66,9 +71,14 @@
 1. 前端大文件上传怎么处理？
 2. 前端如何解决并发问题？（同时发起很多请求）
     - `p-limit`/`p-map`/`p-retry`
+    - `asunc-poll` / `promise-queen`
 3. 什么是 Vue 的 runtime
 4. 手写Redux
 5. p7面试
+6. 兼容性问题
+    - 移动端 safari 100vh 问题
+    - 移动端输入框 ios 首字母自动大写
+    - pc 密码自动填充
 
 
 ### 进阶
@@ -77,7 +87,7 @@
 - 脚手架 网盘课程学习+笔记
     - lerna
     - npm link
-    - process.argv
+    - process.argv `#!/usr/bin/env node` yargs
 - ts
 - nodejs
     1. pm2
@@ -91,3 +101,48 @@
     1. 如何处理http缓存（缓存本只能服务于get请求，而Graphql发出的为post请求）
 - Redis
 - json-web-token
+
+### Blog
+
+1. vite esbuild
+2. commonjs => esmodule
+3. Schema
+    - joi
+    - ajv
+    - fastify
+    - json schema editor
+    - react-jsonschema-form
+
+### 随手
+Proxy的应用：不可变数据 immer.js
+vite怎么引入cjs包
+tree shaking
+webpack提升构建速度 优化体积
+js压缩代码 AST(语法分析token 词法分析) UglifyJS(es6差) terser
+取消请求
+AbortControl
+calc(100%/3)
+zx
+cypress 超越 puppeteer 成为最受欢迎的 E2E 测试框架
+Electron: 我们的老熟人，Chromium + Nodejs，深受大家喜爱
+Tauri: 异军突起的新星，Webview + Rust。对比 Electron 因为不用打包 Chromium 和 Nodejs 运行时，产物体积小，运行性能好
+post请求怎么缓存
+BFF是啥
+nginx负载均衡怎么配置 upstream
+eslint vs prettier
+pm2 start
+前缀树
+
+
+## 进阶
+koa
+- 洋葱模型
+- koa中间件
+- koa-body
+- koa-router原理
+    - find-my-way
+    - path-to-exgexp
+node
+- http req.on 可读流 可写流
+- node-xlsx Bbob/Buffer
+- nodeemailer SMTP css转内联
