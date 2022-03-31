@@ -14,6 +14,7 @@ git remote add origin https://<token>@github.com/<username>/<repo>.git
 git pull --rebase
 # 全局配置 `git config --global pull.rebase true` 不使用rebase策略 `git pull --no-rebase`
 # 解决冲突 -> 1. resolve conflict 2. `git add .` 3. `git rebase --continue` 4. `git push`
+# 如果push时远程feature分支有新的commit, 使用`git push --force-with-lease origin <branch>`
 # 放弃本次rebase操作 -> `git rebase --abort`
 # 本地如果有未提交 在执行前可以 `git stash` 合并提交之后再 `git stash pop`
 git merge --squash <branch>
