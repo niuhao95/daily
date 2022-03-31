@@ -17,4 +17,7 @@ git pull --rebase
 # 放弃本次rebase操作 -> `git rebase --abort`
 # 本地如果有未提交 在执行前可以 `git stash` 合并提交之后再 `git stash pop`
 git merge --squash <branch>
+# 回滚
+git reflog
+git reset --hard <commit>
 ```
